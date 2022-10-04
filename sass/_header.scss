@@ -1,0 +1,631 @@
+//////////////////////
+/// HEADER LEFT PART
+.logo-box {
+  display: flex;
+  height: 6.2rem;
+  width: 24rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.6rem;
+  font-weight: 600;
+  @include respond(tab-land-min) {
+    margin-left: 0;
+    justify-content: flex-start;
+    padding-left: 3.2rem;
+  }
+  @include respond(phone) {
+    height: 7rem;
+    padding-left: 1.6rem;
+  }
+}
+.logo-link {
+  & h3 {
+    color: yellowgreen;
+    font-weight: 700;
+    font-size: 2.8rem;
+    @include respond(tab-land-min) {
+      font-size: 2rem;
+    }
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
+
+    & span {
+      background-image: linear-gradient(
+        to left,
+        rgba(#021025, 0.6),
+        rgba(#0e58c7, 0.8)
+      );
+      color: rgb(255, 255, 255);
+      display: inline-block;
+      padding: 1rem 1rem;
+      clip-path: circle(50% at 50% 50%);
+      transition: 0.4s;
+      @include respond(phone) {
+        padding: 0.5rem 0.5rem;
+      }
+    }
+  }
+}
+.logo-link:link {
+  text-decoration: none;
+}
+.logo-link:hover {
+  & h3 {
+    color: yellowgreen;
+
+    font-weight: 700;
+    font-size: 2.8rem;
+    @include respond(tab-land-min) {
+      font-size: 2rem;
+    }
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
+
+    & span {
+      background-image: linear-gradient(
+        to top left,
+        rgba(#021025, 0.6),
+        rgba(yellowgreen, 0.7)
+      );
+      color: #ffffff;
+      display: inline-block;
+      padding: 1rem 1rem;
+      clip-path: circle(50% at 50% 50%);
+      transform: translateX(2rem);
+      @include respond(phone) {
+        padding: 0.5rem 0.5rem;
+      }
+    }
+  }
+}
+
+///////////////////////
+/// HEADER CENTER PART
+.navbar {
+  display: flex;
+  @include respond(tab-land-min) {
+    display: flex;
+    flex-direction: row;
+  }
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.navbar__link-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0.7rem 1.5rem;
+  margin-right: 5rem;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 3rem;
+
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 0.1rem;
+
+  @include respond(tab-land-min) {
+    margin-right: 2rem;
+    width: 10rem;
+  }
+  &:hover {
+    background: #03e9f4;
+    color: #0e3742;
+    box-shadow: 0 0 0.5rem #03e9f4, 0 0 2.5rem #03e9f4, 0 0 5rem #03e9f4,
+      0 0 20rem #03e9f4;
+    position: relative;
+  }
+}
+
+.navbar__link-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0.7rem 1.5rem;
+  margin-right: 5rem;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 3rem;
+  @include respond(tab-land-min) {
+    margin-right: 2rem;
+    width: 10rem;
+  }
+
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 0.1rem;
+  &:hover {
+    background: yellowgreen;
+    color: #0e3742;
+    box-shadow: 0 0 0.5rem yellowgreen, 0 0 2.5rem yellowgreen,
+      0 0 5rem yellowgreen, 0 0 20rem #03e9f4;
+    position: relative;
+  }
+
+  &__prize::after,
+  &__prize::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "PRIZE";
+    position: absolute;
+    height: 3rem;
+    align-self: center;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    transition: all 0.3s;
+    top: 0;
+  }
+
+  &__prize:hover::after {
+    top: -3.6rem;
+  }
+
+  &__prize:before {
+    content: "50 EGLD";
+    top: 3.6rem;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-shadow: 0rem 0rem 0.1rem;
+  }
+
+  &__prize:hover::before {
+    top: 0;
+  }
+
+  &__margin {
+    position: absolute;
+    display: block;
+
+    &:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 0.2rem;
+      background: linear-gradient(90deg, transparent, yellowgreen);
+      animation: animate1 1s linear infinite;
+    }
+
+    &:nth-child(2) {
+      top: -100%;
+      right: 0%;
+      width: 0.2rem;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, yellowgreen);
+      animation: animate2 1s linear infinite;
+      animation-delay: 0.25s;
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 0.2rem;
+      background: linear-gradient(270deg, transparent, yellowgreen);
+      animation: animate3 1s linear infinite;
+      animation-delay: 0.5s;
+    }
+
+    &:nth-child(4) {
+      bottom: -100%;
+      left: 0%;
+      width: 0.2rem;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, yellowgreen);
+      animation: animate4 1s linear infinite;
+      animation-delay: 0.75s;
+    }
+  }
+}
+
+///////////////////////
+/// HEADER RIGHT PART
+.header-right {
+  display: flex;
+  @include respond(tab-land-min) {
+    margin-right: 1.6rem;
+  }
+}
+
+////////////////
+///HEADER MODAL
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal-login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 6rem 6rem 0 6rem;
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.modal-register {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 6rem 6rem 0 6rem;
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.close-modal {
+  position: fixed;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 4rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background: none;
+
+  &:hover {
+    color: #03e9f4;
+  }
+}
+
+.close-modal-register {
+  position: fixed;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 4rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background: none;
+
+  &:hover {
+    color: #03e9f4;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(0.3rem);
+  z-index: 5;
+}
+
+///////////////
+/// FORM STYLE
+.login-text {
+  margin: 0 0 3rem;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.user-box {
+  position: relative;
+
+  & input {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    border: none;
+    border-bottom: 0.1rem solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  & label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  & input:focus ~ label,
+  & input:valid ~ label {
+    top: -3rem;
+    left: 0;
+    color: #03e9f4;
+    font-size: 1.2rem;
+  }
+}
+
+.submit-login {
+  position: relative;
+  display: inline-block;
+  padding: 0.8rem 0;
+  width: 100%;
+  color: #03e9f4;
+  background-color: transparent;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.3s;
+  margin-top: 2rem;
+  letter-spacing: 0.4rem;
+
+  &:hover {
+    background: #03e9f4;
+    color: rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem #03e9f4, 0 0 1rem #03e9f4, 0 0 2rem #03e9f4,
+      0 0 15rem #03e9f4;
+  }
+}
+
+.recover-login {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  &:hover {
+    color: #03e9f4;
+  }
+}
+
+.create-account {
+  position: relative;
+  bottom: 0rem;
+  left: -6rem;
+  display: flex;
+  background: rgba(0, 0, 0, 0.8);
+  width: 40rem;
+  height: 6rem;
+  border-radius: 0 0 1rem 1rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  // transform: translate(-50%, 0);
+}
+
+.link-create-account {
+  text-decoration: none;
+  color: white;
+  margin-left: 1rem;
+  &:hover {
+    color: yellowgreen;
+  }
+}
+
+/// EGLD PRICE BOX
+.egld-price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  width: 11.1rem;
+  text-transform: uppercase;
+}
+
+///////////////////
+/// MODAL-REGISTER
+
+.user-box-register {
+  position: relative;
+
+  & input {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    border: none;
+    border-bottom: 0.1rem solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  & label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  & input:focus ~ label,
+  & input:valid ~ label {
+    top: -3rem;
+    left: 0;
+    color: yellowgreen;
+    font-size: 1.2rem;
+  }
+}
+
+.submit-register {
+  position: relative;
+  display: inline-block;
+  padding: 0.8rem 0;
+  width: 100%;
+  color: yellowgreen;
+  background-color: transparent;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.3s;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.4rem;
+  border: none;
+
+  &:hover {
+    background: yellowgreen;
+    color: rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem yellowgreen, 0 0 1rem yellowgreen,
+      0 0 2rem yellowgreen, 0 0 15rem yellowgreen;
+  }
+}
+
+.terms-conditions {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  &:hover {
+    color: yellowgreen;
+  }
+}
+
+.link-to-login {
+  text-decoration: none;
+  color: white;
+  margin-left: 1rem;
+  &:hover {
+    color: #03e9f4;
+  }
+}
+.user-box--terms {
+  display: flex;
+  align-items: center;
+  justify-content: content;
+  // position: relative;
+}
+
+.checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+////////////////////
+/// MODAL FORGOTTEN
+.modal-forgotten {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 6rem 6rem 0 6rem;
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+.close-modal-forgotten {
+  position: fixed;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 4rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background: none;
+
+  &:hover {
+    color: #03e9f4;
+  }
+}
+
+.submit-forgotten {
+  position: relative;
+  display: inline-block;
+  padding: 0.8rem 0;
+  width: 100%;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.3s;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.4rem;
+
+  &:hover {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem #ffffff, 0 0 1rem #ffffff, 0 0 2rem #ffffff,
+      0 0 15rem #ffffff;
+  }
+}
+
+.recover-text {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+}
+
+.cancel-forgotten {
+  position: relative;
+  bottom: 0rem;
+  left: -6rem;
+  display: flex;
+  background: rgba(0, 0, 0, 0.8);
+  width: 40rem;
+  height: 6rem;
+  border-radius: 0 0 1rem 1rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.link-cancel-forgotten {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: white;
+  margin-left: 1rem;
+  &:hover {
+    color: #03e9f4;
+  }
+}
+

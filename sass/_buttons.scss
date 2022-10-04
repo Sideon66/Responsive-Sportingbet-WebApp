@@ -1,0 +1,207 @@
+//////////////
+/// BTN-LOGIN
+.btn-login {
+  &,
+  &:link,
+  &:visited {
+    width: 15rem;
+    height: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+
+    color: #ffffff;
+    background-color: #0e3742;
+
+    border: white solid 0.1rem;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  &:hover {
+    border: #03e9f4 solid 0.1rem;
+    background: #03e9f4;
+    color: #0e3742;
+    box-shadow: 0 0 0.5rem #03e9f4, 0 0 2.5rem #03e9f4, 0 0 5rem #03e9f4,
+      0 0 20rem #03e9f4;
+  }
+}
+
+/////////////////
+/// BTN-REGISTER
+.btn-register {
+  &,
+  &:link,
+  &:visited {
+    width: 15rem;
+    height: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+
+    color: yellowgreen;
+    background-color: #0e3742;
+
+    border: white solid 0.1rem;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  &:hover {
+    border: yellowgreen solid 0.1rem;
+    background: yellowgreen;
+    color: #0e3742;
+
+    font-weight: 700;
+    box-shadow: 0 0 0.5rem yellowgreen, 0 0 2.5rem yellowgreen,
+      0 0 5rem yellowgreen, 0 0 20rem yellowgreen;
+  }
+}
+
+/////////////
+/// BTN-COTA
+.btn-cota {
+  &,
+  &:link,
+  &:visited {
+    width: 9rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    color: #0e3742;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: white dashed 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border: #0e3742 solid 0.1rem;
+  }
+
+  &:hover {
+    border: #458cf6 solid 0.1rem;
+    background: #458cf6;
+    color: #ffffff;
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+  }
+}
+
+///////////////
+///  BTN-COTA2
+.btn-cota2 {
+  &,
+  &:link,
+  &:visited {
+    width: 9rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    color: #0e3742;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: white dashed 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border: #0e3742 solid 0.1rem;
+  }
+
+  &:hover {
+    border: #458cf6 solid 0.1rem;
+    background: #458cf6;
+    color: #ffffff;
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+  }
+}
+
+////////////////
+///  BTN-COTA 3
+.btn-cota3 {
+  &,
+  &:link,
+  &:visited {
+    width: 9rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    color: #0e3742;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: white dashed 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border: #0e3742 solid 0.1rem;
+  }
+
+  &:hover {
+    border: #458cf6 solid 0.1rem;
+    background: #458cf6;
+    color: #ffffff;
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+  }
+}
+
+.apasat {
+  border: #458cf6 solid 0.1rem;
+  background: #458cf6;
+  color: #ffffff;
+  box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+}
+
+/////////////
+/// BTN SIGN
+.btn-clear {
+  &,
+  &:link,
+  &:visited {
+    width: 9rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: white dashed 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellowgreen;
+    border: white solid 0.1rem;
+  }
+
+  &:active {
+    outline: none;
+
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+  }
+  &:hover {
+    border: #458cf6 solid 0.1rem;
+    background: #458cf6;
+    color: #000000;
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+  }
+}

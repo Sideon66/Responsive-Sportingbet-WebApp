@@ -1,0 +1,81 @@
+.tabel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  @include respond(phone) {
+    margin-bottom: 0.5rem;
+  }
+
+  &__head {
+    display: flex;
+    width: 100%;
+    background: linear-gradient(255deg, #458cf6, #0e58c7);
+    color: #fff;
+    padding-bottom: 0;
+    height: 2.6rem;
+    font-weight: 500;
+
+    border-radius: 0.5rem 0.5rem 0 0;
+    justify-content: space-between;
+
+    &__left {
+      display: flex;
+      width: 50%;
+      height: 1.8rem;
+      // background-color: rgb(35, 59, 194);
+      padding-left: 1.5rem;
+    }
+
+    &__right {
+      display: flex;
+      width: 50%;
+      height: 1.8rem;
+      justify-content: space-around;
+    }
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    font-weight: 500;
+
+    height: 4rem;
+
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid #eee;
+
+    &__left {
+      display: flex;
+      width: 50%;
+
+      padding-left: 1.5rem;
+    }
+
+    &__right {
+      display: flex;
+      width: 50%;
+
+      justify-content: space-around;
+    }
+  }
+}
+
+.cota {
+  padding-left: 3rem;
+}
+
+.data {
+  margin-right: 5%;
+  font-weight: 300;
+}
+
+.meci {
+  font-weight: 700;
+}
+.meciuri {
+  display: flex;
+  margin-left: 2rem;
+}

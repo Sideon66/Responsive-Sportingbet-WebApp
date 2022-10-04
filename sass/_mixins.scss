@@ -1,0 +1,58 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land-min {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == tab-land-max {
+    @media only screen and (max-width: 91.57em) {
+      @content;
+    } //1465px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 91.57em) {
+      @content;
+    } //1465
+  }
+}
+
+//////////////// btns-mixins
+.btn-register {
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.btn-login {
+  @include respond(tab-port) {
+    width: 8rem;
+    margin-right: 1.6rem;
+  }
+  @include respond(phone) {
+    width: 12rem;
+    height: 4rem;
+    font-size: 1.6rem;
+    border-radius: 0.6rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.btn-cota,
+.btn-cota2,
+.btn-cota3 {
+  @include respond(phone) {
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0.6rem;
+  }
+}

@@ -1,0 +1,230 @@
+.main {
+  height: auto;
+}
+
+//////////////////
+/// SUBNAV
+.subnav {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(#000000, 0.6),
+      rgba(#0e58c7, 0.8)
+    ),
+    url(../img/bg-main.jpg);
+  background-size: cover;
+  background-position: top;
+
+  height: 57rem;
+
+  padding-top: 10rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  @include respond(phone) {
+    padding-top: 5rem;
+    height: 30rem;
+    margin: 0.3rem 0;
+    border-radius: 0;
+  }
+}
+
+.subnav-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  color: yellowgreen;
+  text-shadow: 0 0 0.1rem;
+  @include respond(phone) {
+    font-size: 2.4rem;
+  }
+
+  &__item {
+    margin-top: 1.5rem;
+    @include respond(phone) {
+      margin-top: 0;
+    }
+  }
+}
+
+.subnav-box {
+  width: 84rem;
+  height: 25rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(#0cbadd, 1),
+    rgba(#0e58c7, 0.8)
+  );
+  margin-top: 5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  @include respond(tab-port) {
+    width: 89vw;
+  }
+  @include respond(phone) {
+    margin-top: 1rem;
+    width: 95vw;
+    height: 13rem;
+  }
+
+  &__text {
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    line-height: 2;
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__text:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+}
+
+.trophy-img {
+  height: 100%;
+  border-radius: 0.5rem 0 0 0.5rem;
+  opacity: 0.9;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+///////////////////
+.competition {
+  margin-bottom: 2rem;
+  display: flex;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  @include respond(phone) {
+    margin-bottom: 0.3rem;
+  }
+
+  &__logo__fifa {
+    display: flex;
+    background-color: #fff;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    margin-left: 2rem;
+  }
+
+  .fifa-logo-pic {
+    @include respond(tab-land-max) {
+      width: 10rem;
+      height: 10rem;
+    }
+    @include respond(phone) {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+
+  &__logo__egld {
+    display: flex;
+    background-color: transparent;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2rem;
+    @include respond(tab-land-max) {
+      width: 13rem;
+      height: 10rem;
+    }
+  }
+
+  &__text__1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    margin-right: 1rem;
+    color: #0e3742;
+  }
+
+  &__text__2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2rem;
+    color: #0e3742;
+    @include respond(tab-land-max) {
+      font-size: 1.2rem;
+    }
+  }
+  &__text__3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    color: #0e3742;
+    @include respond(tab-land-max) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+/////////////////
+/// LEFT SIDEBAR
+
+.incadrare {
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tab-land-min) {
+    display: none;
+  }
+}
+
+.text-question {
+  font-size: 1.6rem;
+  display: flex;
+  padding: 0 8%;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  color: rgb(255, 255, 255);
+  text-shadow: 0rem 0rem 0.2rem;
+  background-color: #0c4191;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.text-paragraph {
+  padding: 0.5rem 2rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(#000000, 0.6),
+    rgba(#0e58c7, 0.8)
+  );
+  &__green {
+    color: yellowgreen;
+    font-weight: 500;
+  }
+
+  &__last {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.jpg" />
+
+   
+    <title>E-Chain Bet</title>
+  </head>
+  <body id="app" class="sports-page">
+    <header class="header" id="header">
+      <div class="logo-box">
+        <a href="#" class="logo-link"><h3>E-CHAIN <span>BET</span></h3></a>
+      </div>
+
+      <nav class="navbar">
+        <a href="#games" class="navbar__link-1">
+          <span class="navbar__link-1__margin"></span>
+          <span class="navbar__link-1__margin"></span>
+          <span class="navbar__link-1__margin"></span>
+          <span class="navbar__link-1__margin"></span>
+          Fixtures
+        </a>
+        <a href="#" class="navbar__link-2 navbar__link-2__prize">
+          <span class="navbar__link-2__margin"></span>
+          <span class="navbar__link-2__margin"></span>
+          <span class="navbar__link-2__margin"></span>
+          <span class="navbar__link-2__margin"></span>
+          
+        </a>
+        <div class="egld-price-box">
+          <div class="egld-price__text">EGLD :</div>
+         <div class="egld-price__price"></div>
+         <div>$</div>
+        </div>
+         
+      </nav>
+
+      <div class="header-right">
+        <button class="btn-login">
+          <div >Login</div>
+        </button>
+        <button class="btn-register">
+          <div >Register</div>
+        </button>
+      </div>
+
+      <!-- MODAL LOGIN -->
+      <div class="modal-login hidden" ">
+        <button class="close-modal">&times;</button>
+        
+        <h2 class="login-text">Login</h2>
+        <form>
+          <div class="user-box">
+            <input type="text" name="username" required>
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="password" required>
+            <label>Password</label>
+          </div>
+          <input type="submit" value="Submit" class="submit-login"> 
+          <a href="#" class="recover-login">
+            Forgotten password?
+          </a>
+          
+        </form>
+        <div class="create-account">
+          <p>Don't have an account?</p>
+          <a href="#" class="link-create-account">Register</a>
+        </div>
+      </div>
+
+      <!-- MODAL FORGOTTEN -->
+      <div class="modal-forgotten hidden" ">
+        <button class="close-modal-forgotten">&times;</button>
+        
+        <h2 class="login-text">Recover password</h2>
+        <form>
+          <div class="user-box">
+            <div class="recover-text">Please enter your email address below, and we'll send you a link to set a new password.</div>
+          </div>
+          <div class="user-box">
+            <input type="text" name="email" required="">
+            <label>Email</label>
+          </div>
+          <input type="submit" value="Submit" class="submit-forgotten"> 
+        </form>
+        <div class="cancel-forgotten">
+          <a href="#" class="link-cancel-forgotten">Cancel</a>
+        </div>
+      </div>
+     
+
+      <!-- MODAL REGISTER -->
+      <div class="modal-register hidden">
+        <button class="close-modal-register">&times;</button>
+        
+        <h2 class="login-text">Register</h2>
+        <form>
+          <div class="user-box-register">
+            <input type="text" name="first-name" required>
+            <label>First Name</label>
+          </div>
+          <div class="user-box-register">
+            <input type="text" name="last-name" required>
+            <label>Last Name</label>
+          </div>
+          <div class="user-box-register">
+            <input type="text" name="email" required>
+            <label>Email</label>
+          </div>
+          <div class="user-box-register">
+            <input type="text" name="username" required>
+            <label>Username</label>
+          </div>
+          <div class="user-box-register">
+            <input type="password" name="password" required>
+            <label>Password</label>
+          </div>
+          <div class="user-box-register">
+            <input type="password" name="password" required>
+            <label>Confirm Password</label>
+          </div>
+          <div class="user-box--terms">
+            <input type="checkbox" class="checkbox">
+            <a href="#" class="terms-conditions">
+            I agree with Terms and Conditions
+            </a>
+          </div>
+          
+           <input type="submit" value="Register" class="submit-register"> 
+         
+          
+        </form>
+        <div class="create-account">
+          <p>Already have an account?</p>
+          <a href="#" class="link-to-login">Login</a>
+        </div>
+      </div>
+      
+      <div class="overlay hidden"></div>
+
+    </header>
+    <div class="app-main">
+      <div class="left-sidebar">
+        <div class="stanga">
+          <div class="incadrare">
+            <div class="text-question">How it works?</div>
+            <p class="text-paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <p class="text-paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem animi expedita aut nostrum sequi, temporibus non velit dolores ipsa. </p>
+              <p class="text-paragraph text-paragraph__last">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem animi expedita aut nostrum sequi, temporibus non velit dolores ipsa.
+            </p>
+            <div class="text-question">
+             How and when to enter in the competition?
+            </div>
+            <p class="text-paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+             <p class="text-paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+              <p class="text-paragraph text-paragraph__green"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+              <p class="text-paragraph text-paragraph__last">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </p>
+            <div class="text-question">How do you compete? </div>
+            <p class="text-paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p class="text-paragraph"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+              <p class="text-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p class="text-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+              <p class="text-paragraph"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem animi expedita aut nostrum sequi, temporibus non velit dolores ipsa.</p>
+              <p class="text-paragraph text-paragraph__last"> Security and Transparency
+              Transactions are secured by the Elrond blockchain (every bet will
+              be recorded in the blockchain and can be verified)</p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <h1 class="subnav">
+        <div class="subnav-text">
+        <span class="subnav-text__item"
+          >Do you enjoy betting ?</span
+        >
+        <span class="subnav-text__item">Join the E-chain Competition! </span>
+       
+      </div>
+      <div class="subnav-box">
+        <img src="img/trophy.png" alt="trophy" class="trophy-img"/>
+        <div class="subnav-box__text">
+          Make your predictions in the Final Tournament of Football World Cup 2022,
+          and get the chance of winning EGLD!
+
+
+        </div>
+      </div>
+
+      </h1>
+      <div class="main">
+        <div class="competition">
+          <div class="competition__logo__fifa">
+            <img class="fifa-logo-pic" src="img/fifa-logo.svg" width="80px" alt="fifa-logo" />
+          </div>
+          <div class="competition__text__1">World Cup 2022</div>
+          <div class="competition__text__2">
+            betting competion secured on the blockchain of the
+          </div>
+          <div class="competition__logo__egld">
+            <img src="img/egld-logo.svg" height="100px" alt="egld-logo" />
+          </div>
+          <div class="competition__text__3">network</div>
+        </div>
+        
+        <div class="tabel" id="games">
+          <div class="tabel__head">
+            <div class="tabel__head__left">Round 1</div>
+              <div class="tabel__head__right">
+                 <div class="cota"><span>1</span></div>
+                 <div class="cota"><span>X</span></div>
+                 <div class="cota"><span>2</span></div>   
+              </div>
+            </div>
+          <div class="gamesR1"></div>
+         </div>
+
+        <div class="tabel">
+          <div class="tabel__head">
+            <div class="tabel__head__left">Round 2</div>
+            <div class="tabel__head__right">
+              <div class="cota"><span>1</span></div>
+              <div class="cota"><span>X</span></div>
+              <div class="cota"><span>2</span></div>
+            </div>
+          </div>
+          <div class="gamesR2"></div>
+         </div>
+       
+
+        <div class="tabel">
+          <div class="tabel__head">
+            <div class="tabel__head__left">Round 3</div>
+            <div class="tabel__head__right">
+              <div class="cota"><span>1</span></div>
+              <div class="cota"><span>X</span></div>
+              <div class="cota"><span>2</span></div>
+            </div>
+          </div>
+          <div class="gamesR3"></div>
+        </div>   
+      </div>
+      <div class="right-sidebar">
+       <div class="bilet">
+        <button class="close-modal-ticket">&times;</button>
+         <div class="bilet-titlu">Ticket</div>
+        <div class="control">
+        <div class="meciuri-bilet"> 
+        </div>
+        </div>
+         <div class="clear-ticket-games hidden-remove">
+          <div class="clear-all-text"><div class="clear-all">Clear all selections </div><div class="nr-selection"></div></div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="btn-clear-all">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+             </svg>
+       </div>
+        <div class="total-odd">
+          <div>Total Odd</div>
+          <div class="total-odd-calc">1</div>
+        </div>
+        <div class="bet-ammount">
+        <div>Bet ammount</div>
+        <div class="bet-box">
+          <input type="number" class="input-ammount"  min="0" oninput="validity.valid||(value='')"  required>
+        </div>
+        </div>
+        <div class="potential-win">
+          <div class="potential-win-text">Potential win</div>
+          <div class="potential-win-sum-container" id="potential-win-sum-container">
+            <div class="potential-win-sum">&nbsp</div>
+            <div>$</div> 
+        </div>
+        </div>
+        <div class="btn-bet">BET</div>
+       </div>
+      </div>
+  
+<div class="phone-ticket-indicator hidden ">
+  <div class="phone-ticket-indicator-selections">0</div>
+  <div class="phone-ticket-indicator-odd">1</div> 
+</div>
+     
+    </div>
+    <footer class="footer">
+      <div class="termsAndConditions">Terms and Conditions</div>
+      <div class="copyright">Copyright © 2022 E-Chain Bet</div>
+    </footer>
+    <script  src="egldpricelive.js"></script>
+    <script  src="modals.js"></script>
+    <script  src="meciuri.js"></script>
+    <script  src="rendergames.js"></script>
+    <script  src="script.js"></script>
+  </body>
+</html>

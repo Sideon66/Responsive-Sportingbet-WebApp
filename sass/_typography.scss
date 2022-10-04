@@ -1,0 +1,162 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include respond(tab-land-max) {
+    // width < 1465?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+
+  line-height: 1.6;
+  color: white;
+  font-size: 1.4rem;
+}
+
+////////////////
+/// PAGE GENERAL
+.sports-page {
+  background-image: radial-gradient(
+    at 10% 30%,
+    #176def 2rem,
+    yellowgreen 20%,
+    #1e90ff 50%
+  );
+}
+
+///////////////////
+/// HEADER
+.header {
+  background-image: linear-gradient(
+    to top right,
+    rgba(#021025, 1),
+    rgba(#0e58c7, 1)
+  );
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 50;
+}
+
+///////////////////
+/// MAIN PART
+.app-main {
+  background-image: linear-gradient(
+    to right,
+    rgba(#021025, 0.6),
+    rgba(#176def, 0.8)
+  );
+
+  padding: 6rem 1.6rem;
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+  grid-template-areas:
+    "leftSidebar subnav rightSidebar"
+    "leftSidebar main rightSidebar"
+    "other other other";
+  grid-column-gap: 1.6rem;
+  @include respond(tab-port) {
+    padding: 0;
+    gap: 0;
+  }
+  @include respond(tab-port) {
+    padding-top: 6rem;
+    gap: 0;
+  }
+}
+
+///////////////////
+/// FOOTER
+.footer {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#021025, 0.6),
+    rgba(#0e58c7, 0.8)
+  );
+  height: 100px;
+  color: white;
+  padding: 2rem 9rem;
+  grid-area: other;
+}
+
+//////////////////////////
+/// MAIN PART - LEFT SIDEBAR
+.left-sidebar {
+  grid-area: leftSidebar;
+  width: 24rem;
+  margin-top: 2rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  @include respond(tab-land-min) {
+    display: none;
+  }
+}
+//////////////////////////
+/// MAIN PART - SUBNAV
+
+.subnav {
+  grid-area: subnav;
+  background-color: #458cf6;
+  @include respond(tab-port) {
+    width: 100vw;
+  }
+}
+
+//////////////////////////
+/// MAIN PART - CENTER
+
+.main {
+  grid-area: main;
+}
+
+//////////////////////////
+/// MAIN PART - RIGHT SIDEBAR
+
+.right-sidebar {
+  grid-area: rightSidebar;
+  width: 32rem;
+  margin-top: 2rem;
+  @include respond(tab-land-min) {
+    position: fixed;
+    left: 8rem;
+    opacity: 0;
+    z-index: -50;
+  }
+}
+//////////////////////////
+// SCROLL-BAR
+body::-webkit-scrollbar {
+  width: 1rem;
+  background-color: #0e58c7;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 1.5rem;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(#021025, 1),
+    rgba(#0e58c7, 1)
+  );
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(
+    to top left,
+    rgba(#1853ab, 1),
+    rgba(#03e9f4, 1)
+  );
+}

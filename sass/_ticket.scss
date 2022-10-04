@@ -1,0 +1,290 @@
+.bilet {
+  background-image: linear-gradient(
+    to right,
+    rgba(#000000, 1),
+    rgba(#0e58c7, 1)
+  );
+  width: 32rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 2rem 0;
+  position: fixed;
+  top: 8rem;
+  bottom: 10rem;
+  max-height: 57rem;
+  z-index: 100000000;
+}
+
+.close-modal-ticket {
+  z-index: -100;
+  opacity: 0;
+  @include respond(tab-land-min) {
+    z-index: 9999;
+    opacity: 100;
+    position: fixed;
+    top: 9.5rem;
+    left: 37rem;
+    font-size: 4rem;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background: none;
+
+    &:hover {
+      color: #03e9f4;
+    }
+  }
+}
+
+.bilet-titlu {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.meciuri-bilet {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.meci-bilet {
+  background: linear-gradient(255deg, #458cf6, #0e58c7);
+  clip-path: polygon(50% 0%, 96% 0, 100% 50%, 96% 100%, 4% 100%, 0 50%, 4% 0);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.echipe-bilet {
+  width: 16rem;
+}
+.total-odd {
+  background: linear-gradient(255deg, black, #0e58c7);
+  clip-path: polygon(50% 0%, 96% 0, 100% 50%, 96% 100%, 4% 100%, 0 50%, 4% 0);
+  color: yellowgreen;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin: 1.5rem 0;
+}
+
+.bet-ammount {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.potential-win {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  font-weight: 600;
+}
+
+.potential-win-sum {
+  color: yellowgreen;
+}
+
+.potential-win-sum-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-bet {
+  width: 18rem;
+  color: black;
+  background-color: white;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s;
+  margin-top: 2rem;
+  letter-spacing: 0.4rem;
+  border-radius: 0.5rem;
+  align-self: center;
+
+  &:hover {
+    cursor: pointer;
+    background: #03e9f4;
+    color: rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem #03e9f4, 0 0 1rem #03e9f4, 0 0 2rem #03e9f4,
+      0 0 15rem #03e9f4;
+  }
+}
+
+.input-ammount {
+  width: 10rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: rgba(white, 0.5);
+  border-bottom: 0.3rem solid transparent;
+  color: white;
+  text-align: right;
+  font-weight: 400;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(black, 0.1);
+    border-bottom: 0.3rem solid yellowgreen;
+  }
+}
+
+.input-ammount::-webkit-outer-spin-button,
+.input-ammount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input-ammount[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.ticket-remove-game {
+  stroke: yellowgreen;
+  width: 1.6rem;
+  height: 1.6rem;
+  align-self: center;
+  justify-self: center;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+  }
+}
+
+.btn-clear-all {
+  stroke: #03e9f4;
+  width: 1.6rem;
+  height: 1.6rem;
+  align-self: center;
+  justify-self: center;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(2.5);
+    cursor: pointer;
+  }
+}
+
+.clear-ticket-games {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.hidden-remove {
+  display: none;
+}
+
+.control {
+  max-height: 50rem;
+  overflow: auto;
+}
+
+.control::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.control::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(#021025, 1),
+    rgba(#0e58c7, 1)
+  );
+}
+
+.control::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(
+    to top left,
+    rgba(#1853ab, 1),
+    rgba(#03e9f4, 1)
+  );
+}
+
+.clear-all-text {
+  display: flex;
+}
+
+.nr-selection {
+  color: #03e9f4;
+}
+
+////////////////////
+/// PHONE INDICATOR
+.phone-ticket-indicator {
+  display: none;
+  @include respond(tab-land-min) {
+    height: 12rem;
+    width: 12rem;
+    background-color: #0e58c7;
+    border-radius: 50%;
+    position: fixed;
+
+    right: 3rem;
+    bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: yellowgreen;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    border: #03e9f4 0.3rem solid;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @include respond(phone) {
+    height: 8rem;
+    width: 8rem;
+    font-size: 1.2rem;
+  }
+}
+
+.phone-ticket-indicator-odd {
+  position: absolute;
+}
+
+.phone-ticket-indicator-selections {
+  @include respond(tab-land-min) {
+    position: relative;
+    top: -5rem;
+    right: -3.2rem;
+    height: 5rem;
+    width: 5rem;
+    background-color: #0e58c7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #03e9f4 0.2rem solid;
+  }
+  @include respond(phone) {
+    top: -3rem;
+    right: -3.2rem;
+    height: 3rem;
+    width: 3rem;
+    background-color: #0e58c7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #03e9f4 0.2rem solid;
+  }
+}
